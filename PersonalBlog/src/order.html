@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="../js/style2.js"></script>
+</head>
+<body>
+    <header class="order-header">
+        <div>
+
+            <!--header-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <a class="navbar-brand" href="home.html">KHOI'S BLOG</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="home.html">HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="about.html">ABOUT <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="hobbies.html">HOBBIES <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="contact.html">CONTACT ME <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="order.html">ORDER <span class="sr-only">(current)</span></a>
+                  </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--text-->
+        <div class="home-header-text">
+            <h1>ORDER</h1>
+            <p>Đặt mua sách cũ</p>
+            <a href="#order-main">EXPLORE MORE</a>
+        </div>
+    </header>
+
+    <main id="order-main">
+        <section class="order-container">
+            <div class="order-row">
+                
+                <!--select  box-->
+                <div class="row order-col" id="order-select">
+                    <div class="col-sm-12 col-md-4">
+                        <p>Book name</p>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <select name="books" id="books">
+                            <option value="---select-book---">---select book---</option>
+                            <option value="Dac nhan tam">Đắc nhân tâm</option>
+                            <option value="nghi giau lam giau">Nghĩ giàu làm giàu</option>
+                            <option value="Call me by your name">Call me by your name</option>
+                        </select>
+                        <span id="error-select"></span>
+                    </div>
+                </div>
+
+                <!--user name-->
+                <div class="row order-col" id="order-name">
+                    <div class="col-sm-12 col-md-4">
+                        <p>Your name</p>
+                    </div>
+                    <div class="input col-sm-12 col-md-8">
+                        <input type="text" placeholder="your name" id="name">
+                        <span id="error-name"></span>
+                    </div>
+                </div>
+
+                <!--user message-->
+                <div class="row order-col" id="oder-message">
+                    <div class="col-sm-12 col-md-4">
+                        <p>Message</p>
+                    </div>
+                    <div class="input col-sm-12 col-md-8">
+                        <input type="text" placeholder="Message" id="message">
+                        <span id="error-message"></span>
+                    </div>
+                </div>
+
+                <!--checkbox-->
+                <div class="row order-col" id="order-include">
+                    <div class="col-sm-12 col-md-4">
+                        <p>Include</p>
+                    </div>
+                    <div class="order-checkbox col-sm-12 col-md-8">
+                        <div>
+                            <input type="checkbox" name="include" id="lamp">
+                            <label for="lamp">Đèn chống cận</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="include" id="bookmark">
+                            <label for="bookmark">Thẻ đánh dấu</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="include" id="pencil">
+                            <label for="pencil">Bút chì</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--deliver date-->
+                <div class="row order-col" id="order-date">
+                    <div class="col-sm-12 col-md-4">
+                        <p>Deliver date</p>
+                    </div>
+                    <div class="input col-sm-12 col-md-8">
+                        <input type="date" id="date">
+                        <span id="error-date"></span>
+                    </div>
+                </div>
+
+                <!--deliver to-->
+                <div class="row order-col" id="order-deliver">
+                    <div class="col-sm-12 col-md-4">
+                        <p>Deliver to</p>
+                    </div>
+                    <div class="input col-sm-12 col-md-8">
+                        <textarea name="deliver-to" id="deliver" cols="30" rows="10"></textarea>
+                        <span id="error-deliver"></span>
+                    </div>
+                </div>
+
+                <!--call before deliver-->
+                <div class="order-col" id="order-call">
+                    <div>
+                        <p>Call before deliver?</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="yes" name="radio-btn">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="no" name="radio-btn">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+                
+                <div class="order-col" id="order-btn">
+                   <input type="button" value="ORDER NOW" onclick="orderValidation()">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
